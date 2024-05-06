@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="./main.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          colors: {
+            orange: "hsl(26, 100%, 55%)",
+            paleorange: "hsl(25, 100%, 94%)",
+            darkblue: "hsl(220, 13%, 13%)",
+            dgblue: "hsl(219, 9%, 45%)",
+            gblue: "hsl(220, 14%, 75%)",
+            lgblue: "hsl(223, 64%, 98%)",
+            white: "hsl(0, 0%, 100%)",
+            black: "hsl(0, 0%, 0%)",
+            blackopacity: "hsla(0, 0%, 0%, 0.75)",
+          },
+          extend: {},
+        },
+      };
+    </script>
+
+    <title>E-commerce product page</title>
+  </head>
+  <body class="min-h-screen min-w-screen relative">
+    <div class="max-w-[1120px] min-h-screen px-1.5 m-auto">
+      <header>
+        <nav
+          class="navbar flex justify-between items-center pt-6 md:border-b border-gblue md:mb-20"
+        >
+          <section
+            class="nav-first gap-8 flex items-center md:gap-12 pb-2 md:pb-5"
+          >
+            <img
+              src="./images/icon-menu.svg"
+              alt="menu"
+              class="menu-icon md:hidden cursor-pointer"
+            />
+            <div class="logo">
+              <img src="./images/logo.svg" alt="logo" class="md:h-6" />
+            </div>
+            <div
+              class="backdrop hidden bg-blackopacity w-screen h-screen block absolute top-0 left[-5px] z-13"
+            ></div>
+            <div
+              class="nav-links hidden md:flex flex-col md:flex-row md:bg-transparent md:items-center absolute md:relative top-0 left-[-5px] gap-8 bg-white max-w-[220px] w-full h-screen md:w-full md:h-full items-start z-10 py-6 px-8"
+            >
+              <img
+                src="./images/icon-close.svg"
+                class="close-icon md:hidden mb-8 cursor-pointer"
+                alt="close"
+              />
+              <a
+                href="#"
+                class="text-black font-semibold md:font-medium md:text-dgblue hover:text-black relative hover:after:content-[''] hover:after:absolute hover:after:w-full hover:after:h-1 hover:after:left-0 hover:after:bottom-[-5px] md:hover:after:bottom-[-47px] hover:after:bg-orange"
+                >Collections</a
+              >
+              <a
+                href="#"
+                class="text-black font-semibold md:font-medium md:text-dgblue hover:text-black relative hover:after:content-[''] hover:after:absolute hover:after:w-full hover:after:h-1 hover:after:left-0 hover:after:bottom-[-5px] md:hover:after:bottom-[-47px] hover:after:bg-orange"
+                >Men</a
+              >
+              <a
+                href="#"
+                class="text-black font-semibold md:font-medium md:text-dgblue hover:text-black relative hover:after:content-[''] hover:after:absolute hover:after:w-full hover:after:h-1 hover:after:left-0 hover:after:bottom-[-5px] md:hover:after:bottom-[-47px] hover:after:bg-orange"
+                >Women</a
+              >
+              <a
+                href="#"
+                class="text-black font-semibold md:font-medium md:text-dgblue hover:text-black relative hover:after:content-[''] hover:after:absolute hover:after:w-full hover:after:h-1 hover:after:left-0 hover:after:bottom-[-5px] md:hover:after:bottom-[-47px] hover:after:bg-orange"
+                >About</a
+              >
+              <a
+                href="#"
+                class="text-black font-semibold md:font-medium md:text-dgblue hover:text-black relative hover:after:content-[''] hover:after:absolute hover:after:w-full hover:after:h-1 hover:after:left-0 hover:after:bottom-[-5px] md:hover:after:bottom-[-47px] hover:after:bg-orange"
+                >Contact</a
+              >
+            </div>
+          </section>
+
+          <section class="nav-second flex items-center gap-11 md:pb-6">
+            <img src="./images/icon-cart.svg" alt="cart" />
+            <div class="avatar">
+              <img
+                src="./images/image-avatar.png"
+                alt="avatar"
+                class="h-12 w-12"
+              />
+            </div>
+          </section>
+        </nav>
+      </header>
+
+      <section
+        class="main flex gap-[125px] min-h-[570px] items-center px-[50px]"
+      >
+        <div class="default gallery flex-1 flex flex-col gap-[30px]">
+          <div class="main-img">
+            <img
+              class="max-w-[445px] max-h-[445px] w-full h-full rounded-[20px] cursor-pointer"
+              src="./images/image-product-1.jpg"
+              alt="product"
+            />
+            <img
+              class="hidden max-w-[445px] max-h-[445px] w-full h-full rounded-[20px] cursor-pointer"
+              src="./images/image-product-2.jpg"
+              alt="product"
+            />
+            <img
+              class="hidden max-w-[445px] max-h-[445px] w-full h-full rounded-[20px] cursor-pointer"
+              src="./images/image-product-3.jpg"
+              alt="product"
+            />
+            <img
+              class="hidden max-w-[445px] max-h-[445px] w-full h-full rounded-[20px] cursor-pointer"
+              src="./images/image-product-4.jpg"
+              alt="product"
+            />
+          </div>
+
+          <div class="thumb-list flex justify-between max-w-[445px] w-full">
+            <div
+              class="max-w-[90px] max-h-[90px] mx-[2px] border-2 border-orange rounded-[13px]"
+            >
+              <img
+                class="w-full h-full rounded-[10px] cursor-pointer hover:opacity-50 opacity-30"
+                src="./images/image-product-1-thumbnail.jpg"
+                alt="product thumbnail"
+              />
+            </div>
+            <div class="max-w-[90px] max-h-[90px] mx-[2px]">
+              <img
+                class="w-full h-full rounded-[10px] cursor-pointer hover:opacity-50"
+                src="./images/image-product-2-thumbnail.jpg"
+                alt="product thumbnail"
+              />
+            </div>
+            <div class="max-w-[90px] max-h-[90px] mx-[2px]">
+              <img
+                class="w-full h-full rounded-[10px] cursor-pointer hover:opacity-50"
+                src="./images/image-product-3-thumbnail.jpg"
+                alt="product thumbnail"
+              />
+            </div>
+            <div class="max-w-[90px] max-h-[90px] mx-[2px]">
+              <img
+                class="w-full h-full rounded-[10px] cursor-pointer hover:opacity-50"
+                src="./images/image-product-4-thumbnail.jpg"
+                alt="product thumbnail"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div class="content flex-1">
+          <h3>Sneaker Company</h3>
+        </div>
+      </section>
+    </div>
+
+    Fall Limited Edition Sneakers These low-profile sneakers are your perfect
+    casual wear companion. Featuring a durable rubber outer sole, they’ll
+    withstand everything the weather can offer. $125.00 50% $250.00 0 Add to
+    cart
+  </body>
+</html>
